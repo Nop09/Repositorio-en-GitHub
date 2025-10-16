@@ -1,0 +1,12 @@
+import hashlib
+
+# Solicitar un texto
+texto = input("Escribe un texto para generar su fingerprint: ")
+
+# Crear el fingerprint usando SHA-256
+fingerprint = hashlib.sha256(texto.encode()).hexdigest()
+
+# Mostrar el resultado
+print("\n--- FINGERPRINT DIGITAL ---")
+print(f"Texto original: {texto}")
+print(f"Fingerprint (SHA-256): {fingerprint}")
